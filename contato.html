@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Trabalho acadêmico - Dennis Ritchie">
+        <meta name="keywords" content="Dennis Ritchie">
+        <meta name="author" content="João Rodrigues">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="geral/icone.jpg">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Contato</title>
+        <script>
+            function validar(){
+                var nome = form1.nome.value;
+                var email = form1.email.value;
+                var senha = form1.senha.value;
+                var rep_senha = form1.rep_senha.value;
+
+                if (nome == ""){
+                    alert("Preencha o campo com seu nome");
+                    form1.nome.focus();
+                    return false;
+                }
+
+                if (email == ""){
+                    alert("Preencha o campo com seu email");
+                    form1.email.focus();
+                    return false;
+                }
+
+                if (senha == ""){
+                    alert("Preencha o campo com sua senha");
+                    form1.senha.focus();
+                    return false;
+                }
+
+                if (rep_senha == ""){
+                    alert("Repita sua senha");
+                    form1.rep_senha.focus();
+                    return false;
+                }
+
+                if (nome.lenqth < 5){
+                    alert("Digite seu nome completo");
+                    form1.nome.focus();
+                    return false;
+                }
+
+                if (senha != rep_senha){
+                    alert("Senhas diferentes");
+                    form1.senha.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="all">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html"> Sobre</a></li>
+                <li><a href="contribuicoes.html">Contribuições</a></li>
+                <li><a href="contato.html">Fale conosco</a></li>
+            </ul>
+        </div>
+        <br><br><br><br>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <h1>Envie seu comentário!</h1>
+                        <hr>
+                        <br><br><br>
+                        <form name="form1" action="formaviso.html" method="post">
+                            Nome: <input name="nome" type="text">
+                            <br><br>
+                            Email: <input name="email" type="text">
+                            <br><br>
+                            Senha: <input name="senha" type="password">
+                            <br><br>
+                            Repita senha: <input name="rep_senha" type="password">
+                            <br><br>
+                            <div align="left">
+                            Comentário:<br>
+                            </div>
+                            <textarea cols="50" rows="10" name="comentario"> </textarea>
+                            <br>
+                            <div align="center">
+                                <input type="submit" onclick="return validar()">
+                                <input type="reset" name="limpa" value="Limpar">
+                            </div>
+                        </form>
+                    </td>
+                </tr>  
+            </table>
+            <br><br><br><br><br>
+            <hr>
+            <br>
+            <h5><strong><em>João Rodrigues</em> 2024 &copy;Todos os direitos reservados<br>
+            Trabalho acadêmico sem fins lucrativos</h5></strong>
+        </center>
+    </body>
+</html>
